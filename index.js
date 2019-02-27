@@ -34,18 +34,18 @@ async function getDeparture() {
 /**
  * Status der abgefragten Abfahrtszeiten.
  * @param {Array} departures 
- * @returns {Boolean} true/false
+ * @returns {Boolean}
  */
 function isDelayed(departures) {
-  if (!departures) return true;
+  if (!departures) return false;
 
   for (const el in departures) {
     if (el.status !== "puenktlich") {
-      return false;
+      return true;
     }
   }
 
-  return true;
+  return false;
 }
 
 /**
@@ -128,8 +128,8 @@ function saveHtml(html) {
 
 /**
  * Versendet eine E-Mail mit den Ergebnissen.
- * @param {String} html 
- * @param {Boolean} status 
+ * @param {String} html E-Mail-Text
+ * @param {Boolean} status verspätet?
  */
 async function sendMail(html, status) {
   const transportOptions = {
@@ -142,7 +142,7 @@ async function sendMail(html, status) {
   };
 
   let subject = 'pünktliche';
-  if (!status) {
+  if (status) {
     subject = 'verspätete';
   }
 
