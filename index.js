@@ -82,7 +82,7 @@ function getHtml(departures = []) {
             ${el.transport}
           </td>
           <td>
-            ${el.cancellation ? 'Ausgefallen' : el.status}
+            ${el.cancellation ? '<b>Ausgefallen</b>' : el.status}
           </td>
       </tr>
     `;
