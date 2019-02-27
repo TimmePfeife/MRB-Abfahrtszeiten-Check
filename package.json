@@ -1,0 +1,16 @@
+{
+  "name": "MRB-Abfahrtszeiten-Check",
+  "version": "1.0.0",
+  "description": "Skript welches die Abfahrtszeiten eines angefahren Bahnhofes des MRB zurückliefert.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Tim Pfeifer",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "console.table": "^0.10.0",
+    "nodemailer": "^5.1.1"
+  }
+}
