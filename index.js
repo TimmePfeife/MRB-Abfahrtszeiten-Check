@@ -129,9 +129,9 @@ function saveHtml(html) {
 /**
  * Versendet eine E-Mail mit den Ergebnissen.
  * @param {String} html E-Mail-Text
- * @param {Boolean} status verspätet?
+ * @param {Boolean} delayed verspätet?
  */
-async function sendMail(html, status) {
+async function sendMail(html, delayed) {
   const transportOptions = {
     host: Config.HOST,
     port: Config.PORT,
@@ -142,7 +142,7 @@ async function sendMail(html, status) {
   };
 
   let subject = 'pünktliche';
-  if (status) {
+  if (delayed) {
     subject = 'verspätete';
   }
 
@@ -154,9 +154,8 @@ async function sendMail(html, status) {
   };
 
   const transporter = Mailer.createTransport(transportOptions);
-  const info = await transporter.sendMail(mailOptions)
 
-  console.log(info);
+  await transporter.sendMail(mailOptions);
 }
 
 /**
