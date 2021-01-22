@@ -1,5 +1,5 @@
 # MRB-Abfahrtszeiten-Check
-Skript welches die Abfahrtszeiten eines angefahren Bahnhofes des MRB zurückliefert.
+Skript welches die Abfahrtszeiten eines angefahren Bahnhofes der Mitteldeutschen Regiobahn (MRB) zurückliefert.
 
 ## Installation
 Erstellen einer lokalen Arbeitskopie
