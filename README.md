@@ -14,3 +14,9 @@ Starten der Anwendung. Vorher müssen die Einstellungen in der [config.js](./con
 
 `node index.js`
 
+## Vorschau
+### Konsole
+![Konsole](./preview/console.png)
+
+### Email
+![E-Mail](./preview/email.png)
