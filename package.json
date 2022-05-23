@@ -11,6 +11,6 @@
   "dependencies": {
     "axios": "^0.21.1",
     "console.table": "^0.10.0",
-    "nodemailer": "^6.4.16"
+    "nodemailer": "^6.6.1"
   }
 }
